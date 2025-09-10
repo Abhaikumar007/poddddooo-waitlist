@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PODOOO - Powering Data. Creating Opportunities.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="css/demo.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css">
+  
+  <!-- === CSS FIXES AND MODIFICATIONS === -->
+  <style>
+    /* Style for the video background */
+    #video-bg {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        width: 100%; 
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+		background:black;
+    }
+
+    /* Applying the new Poppins font */
+    body, .form-control, .tm-btn-subscribe {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+
+    .tm-content P {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .tm-btn-subscribe {
+        background-color:#8f00ff;
+        font-size: 16px;
+    }
+
+    .form-control::placeholder {
+        font-size: 15px;
+        color: #ccc;
+    }
+
+    .tm-content p a {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /* --- THE STICKY FOOTER SOLUTION --- */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        background-color: #000; /* Fallback color if video/image fails */
+    }
+    .container-fluid {
+       flex: 1 0 auto;
+    }
+    .footer-link {
+        flex-shrink: 0;
+        text-align: center;
+        padding: 20px 0;
+        color: white;
+        width: 100%;
+        z-index: 1001;
+    }
+
+    /* === MOBILE OPTIMIZATIONS (APPLIES TO SCREENS <= 768px WIDE) === */
+    @media (max-width: 768px) {
+        /* 1. Hide the heavy video and particle canvas */
+        #video-bg,
+        #particles-js {
+            display: none;
+        }
+
+        /* 2. Set the lightweight static image as the background */
+        body {
+            background: url('img/earth-mobile.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* 3. Adjust content position slightly for better mobile layout */
+        .tm-content {
+            margin-top: 2rem; /* Adds a little space from the top */
+            margin-right: auto; /* Centers the content block */
+        }
+
+        /* 4. Make paragraph text slightly smaller on mobile for readability */
+        .tm-content P {
+            font-size: 14px;
+        }
+    }
+    
+    /* === NEW: DESKTOP LOGO POSITIONING (APPLIES TO SCREENS > 768px WIDE) === */
+    @media (min-width: 769px) {
+        .logo-header {
+            position: absolute; /* Position it relative to the viewport */
+            top: -9rem;      /* 40px from the top */
+            right: 40px;     /* 40px from the right */
+            z-index: 1000;   /* Ensure it's on top of other content */
+            margin-bottom: 0; /* Remove the bottom margin it had */
+        }
+
+        .tm-content {
+			margin-top:100px;
+            padding-top: 80px; 
+        }
+    }
+
+  </style>
+
+  <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+		
+	</head>
+
+	<body>
+			
+			<div id="particles-js"></div>
+		
+            <video autoplay muted loop playsinline id="video-bg">
+                <source src="img/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+
+			<div class="container-fluid">
+				<div class="row cb-slideshow-text-container ">
+					<div class= "tm-content col-xl-6 col-sm-8 col-xs-8 ml-auto section">
+					
+					<!-- HTML CHANGE: Added a new class "logo-header" to the header element -->
+					<header class="mb-5 logo-header"><h1><img style="width:300px;" src="img/no_bg_image.png"></h1></header>
+					
+					<!-- HTML FIX: Removed invalid <q> tag around the <P> tag -->
+					<P class="mb-3"><strong>Powering Data. Creating Opportunities.</strong></P>
+					
+					<P class="mb-5">We are a stealth startup building a data-powered company. We create intelligence that transforms data into Opportunities, Options, and Outcomes. We’re building quietly and testing deeply, preparing to launch with impact. For direct inquiries, feel free to contact us at <a href="mailto:admin@podooo.com">admin@podooo.com</a>. Stay tuned ...the future of data intelligence is almost here.</P>
+					
+                    <form action="mailto:admin@podooo.com" method="post" enctype="text/plain" class="subscribe-form">
+               	    	<div class="row form-section">
+
+							<div class="col-md-7 col-sm-7 col-xs-7">
+			                      <input name="email" type="email" class="form-control" id="contact_email" placeholder="Enter your email to join..." required/>
+				  			</div>
+							<div class="col-md-5 col-sm-5 col-xs-5">
+								<button type="submit" class="tm-btn-subscribe">Join The Waitlist</button>
+							</div>
+						
+						</div>
+                    </form>
+                    
+					<div class="tm-social-icons-container text-xs-center">
+	                    <a href="#" class="tm-social-link"><i class="fa fa-facebook"></i></a>
+	                    <a href="#" class="tm-social-link"><i class="fa fa-google-plus"></i></a>
+	                    <a href="#" class="tm-social-link"><i class="fa fa-twitter"></i></a>
+	                    <a href="#" class="tm-social-link"><i class="fa fa-linkedin"></i></a>
+                        <div class="footer-link" >
+                                <p style="position:relative;top:80px">Copyright © 2025 PODOOO</p>
+                        </div>
+	                </div>
+
+					</div>
+				</div>	
+
+			</div>	
+			
+	</body>
+
+    <!-- JAVASCRIPT FOR PARTICLE EFFECT (OPTIMIZED FOR MOBILE) -->
+	<script type="text/javascript" src="js/particles.js"></script>
+    <script type="text/javascript">
+      // Only initialize particles.js on screens wider than 768px (desktops/large tablets)
+      if (window.innerWidth > 768) {
+        // You might need to adjust the path to your particles.json file.
+        // This assumes your 'js' folder is at the root level with your HTML file.
+        // This is the code that was likely in your old 'app.js' file.
+        particlesJS.load('particles-js', 'js/particles.json', function() {
+          console.log('Particles.js config loaded for desktop view.');
+        });
+      }
+    </script>
+</html>
